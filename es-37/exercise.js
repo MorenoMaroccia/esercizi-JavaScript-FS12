@@ -1,12 +1,9 @@
 function printName (){
-    let helloName = "Hello John"
- 
-  
-   function inner() {
-     console.log(helloName)
-   }
-   return inner
- }
- 
- printName();
+    this.helloName = "Hello John"
+
+  let inner = () =>{ console.log(this.helloName)};
+  return inner
+}
+
+printName()();
  
